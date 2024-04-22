@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>My Profile</title>
+  </head>
+  <body class="bg-[#1D267D]">
+    <nav class="bg-[#0C134F] p-1">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <img
+            class=""
+            src="assets/cek_toko_sebelah-.png"
+            alt=""
+            width="100px"
+            height=""
+          />
+          <a href="#" class="text-white mr-4 font-bold">E-Commerce Buku</a>
+        </div>
+        <div>
+          <!-- Dropdown -->
+          <div
+            x-data="{ open:false }"
+            @click.away="open = false"
+            class="relative"
+          >
+            <button class="text-white mr-6">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <button class="text-white mr-6">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="text-white mr-6">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button
+              @click="{open = !false}"
+              class="focus:outline-none border rounded-full px-2 bg-white"
+            >
+              <i class="fa-solid fa-user"></i>
+            </button>
+            <div
+              x-show="open"
+              class="absolute bg-[#1D387D] mt-2 py-2 rounded-md shadow-lg right-1"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#D9D9D9] text-sm hover:bg-[#2553c7]"
+                >loremipsum@gmail.com</a
+              >
+              <hr />
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#FFFFFF] text-sm hover:bg-[#2553c7]"
+                >All Ebook</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#FFFFFF] text-sm hover:bg-[#2553c7]"
+                >Dashboard</a
+              >
+              <hr />
+              <button
+                class="block px-4 py-2 text-[#D9D9D9] text-sm hover:bg-[#2553c7]"
+              >
+                Signout
+              </button>
+            </div>
+          </div>
+          <!-- End Dropdown -->
+        </div>
+      </div>
+    </nav>
+    <div class="bg-[#1D267D] p-4 h-fit w-[75%] mx-auto">
+        <h2 class="text-[#FFFFFF] font-bold mt-5 ">My Profile</h2> <hr style="color: #FFFFFF; width: 8%;">
+        <div class="border border-slate-200 rounded-xl mt-5  flex flex-row p-5 py-10 items-center mx-auto">
+            <img class="rounded-full w-14 h-14 mr-3" src="assets/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded.jpg" alt="">
+            <div class="text-[#FFFFFF] text-sm font-semibold">
+                <p>Lorem Ipsum</p>
+                <p>Manager</p>
+                <p>Denpasar</p>
+            </div>
+            <div class="relative ">
+                <button class="py-2 px-4 bg-[#2F58CD] text-[#FFFFFF] ml-[700px]">Edit <i class="fas fa-edit text-[#FFFFFF]"></i></button>
+            </div>     
+        </div>
+    </div>
+    <div class="bg-[#1D267D] p-4 h-fit w-[75%] mx-auto">
+        <div class="border rounded-xl">
+            <div class="flex justify-between  items-center relative ">
+                <h2 class="text-[#FFFFFF] font-semibold ">Personal Information</h2>
+                <button class="py-2 px-4 bg-[#2F58CD] text-[#FFFFFF] mr-[40px]">Edit <i class="fas fa-edit text-[#FFFFFF]"></i></button>
+            </div>
+            <table style="width: 50%;" class="text-[#FFFFFF] font-semibold  ">
+                <tr">
+                    <td>First Name</td>
+                    <td>Last Name</td>
+                </tr>
+                <tr>
+                    <td>Lorem</td>
+                    <td>Ipsum</td>
+                </tr>
+            </table>
+            <table style="width: 50%;" class="text-[#FFFFFF] font-semibold ">
+                <tr>
+                    <td>Email</td>
+                    <td>Phone</td>
+                </tr>
+                <tr>
+                    <td>loremipsum@gmail.com</td>
+                    <td>+628123456789</td>
+                </tr>
+            </table>
+            <table style="width: 50%;" class="text-[#FFFFFF] font-semibold ">
+                <tr>
+                    <td>Bio</td>
+                </tr>
+                <tr>
+                    <td>Manager</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <footer>
+      <div class="bg-[#1D267D] p-4 h-fit w-[75%] mx-auto justify-between flex">
+        <div class="flex justify-between items-center">
+          <h1 class="text-[#FFFFFF] font-thin text-sm">
+            &copy; 2023 Cek Toko Sebelah. All Right Reserved
+          </h1>
+        </div>
+        <div class="py-2 px-2">
+          <a href="#"
+            ><i class="fa-brands fa-instagram text-[#FFFFFF] mr-5"></i
+          ></a>
+          <a href="#"
+            ><i class="fa-brands fa-twitter text-[#FFFFFF] mr-5"></i
+          ></a>
+          <a href="#"><i class="fa-brands fa-github text-[#FFFFFF]"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

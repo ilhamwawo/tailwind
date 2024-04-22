@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Product</title>
+  </head>
+  <body class="bg-[#1D267D]">
+    <nav class="bg-[#0C134F] p-1">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <img
+            class=""
+            src="assets/cek_toko_sebelah-.png"
+            alt=""
+            width="100px"
+            height=""
+          />
+          <a href="#" class="text-white mr-4 font-bold">E-Commerce Buku</a>
+        </div>
+        <div>
+          <!-- Dropdown -->
+          <div
+            x-data="{ open:false }"
+            @click.away="open = false"
+            class="relative"
+          >
+            <button class="text-white mr-6">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <button class="text-white mr-6">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="text-white mr-6">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button
+              @click="{open = !false}"
+              class="focus:outline-none border rounded-full px-2 bg-white"
+            >
+              <i class="fa-solid fa-user"></i>
+            </button>
+            <div
+              x-show="open"
+              class="absolute bg-[#1D387D] mt-2 py-2 rounded-md shadow-lg right-1"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#D9D9D9] text-sm hover:bg-[#2553c7]"
+                >loremipsum@gmail.com</a
+              >
+              <hr />
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#FFFFFF] text-sm hover:bg-[#2553c7]"
+                >All Ebook</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#FFFFFF] text-sm hover:bg-[#2553c7]"
+                >Dashboard</a
+              >
+              <hr />
+              <button
+                class="block px-4 py-2 text-[#D9D9D9] text-sm hover:bg-[#2553c7]"
+              >
+                Signout
+              </button>
+            </div>
+          </div>
+          <!-- End Dropdown -->
+        </div>
+      </div>
+    </nav>
+    <div class="container mx-auto flex flex-col lg:flex-row mt-6">
+        <aside class="p-4 w-full lg:w-1/4 bg-[#1D387D] border rounded-sm shadow-md h-[30%]">
+            <h2 class="font-thin text-sm border-b-2 border-white text-[#FFFFFF] pb-2 mb-4 w-[90%]">Filters</h2>   
+            <h2 class="text-[#FFFFFF] font-semibold ">Sort By</h2>
+            <div class="flex items-center py-2"> 
+                <i class="fa-regular fa-circle bg-white rounded-full text-white mr-10 "></i> <p class="text-[#FFFFFF]">Price - Low to High</p>
+            </div>
+            <div class="flex items-center py-2"> 
+                <i class="fa-regular fa-circle bg-white rounded-full text-white mr-10 "></i> <p class="text-[#FFFFFF]">Price - Low to High</p>
+            </div>
+            <h2 class="text-[#FFFFFF] font-semibold">Rating</h2>
+            <div class="flex items-center py-2 "> 
+                <i class="fa-regular fa-circle bg-white rounded-full text-white mr-10 "></i> <p class="text-[#FFFFFF]">Price - Low to High</p>
+            </div>
+            <div class="flex items-center py-2 "> 
+                <i class="fa-regular fa-circle bg-white rounded-full text-white mr-10 "></i> <p class="text-[#FFFFFF]">Price - Low to High</p>
+            </div>
+            <div class="flex items-center py-2 "> 
+                <i class="fa-regular fa-circle bg-white rounded-full text-white mr-10 "></i> <p class="text-[#FFFFFF]">Price - Low to High</p>
+            </div>
+            <div class="flex items-center py-2 "> 
+                <i class="fa-regular fa-circle bg-white rounded-full text-white mr-10 "></i> <p class="text-[#FFFFFF]">Price - Low to High</p>
+            </div>
+            <h2 class="text-[#FFFFFF] font-semibold">Other Filters</h2>
+            <div class="flex items-center py-2 "> 
+                <i class="fa-regular fa-circle bg-white rounded-full text-white mr-10 "></i> <p class="text-[#FFFFFF]">Price - Low to High</p>
+            </div>
+            <div class="flex items-center py-2 "> 
+                <i class="fa-regular fa-circle bg-white rounded-full text-white mr-10 "></i> <p class="text-[#FFFFFF]">Price - Low to High</p>
+            </div>
+        </aside>
+        <main class="w-full lg:w-3/4 ml-10  ">
+            <div class="flex justify-between">
+                <h2 class="text-[#FFFFFF] font-semibold mb-6">All eBooks (15)</h2>
+                <i class="fas fa-ellipsis-v text-[#FFFFFF]"></i>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-auto ">
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+              <div class="border rounded-lg p-4 shadow-sm mx-auto ">
+                <div class="w-72" >
+                  <img
+                    class="mx-auto"
+                    src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                    alt=""
+                    width="330px"
+                  />
+                  <h2 class=" text-[#FFFFFF]">
+                      Lorem ipsum dolor sit amet consectetur
+                  </h2>
+                  <p class=" text-[#FFFFFF]">
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                    maxime!
+                  </p>
+                  <p style="color: yellow" class="">
+                    <i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i
+                    ><i class="fa-solid fa-star mr-1"></i>
+                  </p>
+                  <div class="flex justify-between items-center">
+                    <p class="text-[#FFFFFF]">$99</p>
+                    <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+        </main>
+    </div>
+    <footer>
+        <div class="bg-[#1D267D] p-4 h-fit w-[75%] mx-auto justify-between flex">
+          <div class="flex justify-between items-center">
+              <h1 class="text-[#FFFFFF] font-thin text-sm">&copy; 2023 Cek Toko Sebelah. All Right Reserved</h1>
+          </div>
+          <div class="py-2 px-2">
+              <a href="#"><i class="fa-brands fa-instagram text-[#FFFFFF] mr-5"></i></a>
+              <a href="#"><i class="fa-brands fa-twitter text-[#FFFFFF] mr-5"></i></a>
+              <a href="#"><i class="fa-brands fa-github text-[#FFFFFF]"></i></a>
+          </div>
+        </div>
+    </footer>
+  </body>
+</html>

@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../src/output.css" />
+    <script
+      src="https://cdn.jsdelivr.net/npm/alpinejs@2.8.2/dist/alpine.min.js"
+      defer
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"
+      integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <title>Project Figma</title>
+  </head>
+  <body class="bg-[#1D267D]">
+    <nav class="bg-[#0C134F] p-1">
+      <div class="container mx-auto flex justify-between items-center">
+        <div class="flex items-center">
+          <img
+            class=""
+            src="assets/cek_toko_sebelah-.png"
+            alt=""
+            width="100px"
+            height=""
+          />
+          <a href="#" class="text-white mr-4 font-bold">E-Commerce Buku</a>
+        </div>
+        <div>
+          <!-- Dropdown -->
+          <div
+            x-data="{ open:false }"
+            @click.away="open = false"
+            class="relative"
+          >
+            <button class="text-white mr-6">
+              <i class="fa-solid fa-gear"></i>
+            </button>
+            <button class="text-white mr-6">
+              <i class="fa-solid fa-magnifying-glass"></i>
+            </button>
+            <button class="text-white mr-6">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </button>
+            <button
+              @click="{open = !false}"
+              class="focus:outline-none border rounded-full px-2 bg-white"
+            >
+              <i class="fa-solid fa-user"></i>
+            </button>
+            <div
+              x-show="open"
+              class="absolute bg-[#1D387D] mt-2 py-2 rounded-md shadow-lg right-1"
+            >
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#D9D9D9] text-sm hover:bg-[#2553c7]"
+                >loremipsum@gmail.com</a
+              >
+              <hr />
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#FFFFFF] text-sm hover:bg-[#2553c7]"
+                >All Ebook</a
+              >
+              <a
+                href="#"
+                class="block px-4 py-2 text-[#FFFFFF] text-sm hover:bg-[#2553c7]"
+                >Dashboard</a
+              >
+              <hr />
+              <button
+                class="block px-4 py-2 text-[#D9D9D9] text-sm hover:bg-[#2553c7]"
+              >
+                Signout
+              </button>
+            </div>
+          </div>
+          <!-- End Dropdown -->
+        </div>
+      </div>
+    </nav>
+    <div class="bg-[#1D267D] p-4 h-fit w-[75%] mx-auto">
+      <div class="mx-auto flex items-center">
+        <div class="bg-[#1D267D] my-8">
+          <h1 class="text-[#FFFFFF] my-8 mx-10 font-bold text-4xl">
+            Cek Toko Sebelah
+          </h1>
+          <p class="text-[#FFFFFF] my-8 mx-10">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem,
+            minima?
+          </p>
+          <button
+            class="bg-[#2F58CD] my-2 mx-10 text-[#FFFFFF] px-3 py-2 rounded-lg"
+          >
+            Explore eBooks
+          </button>
+        </div>
+        <div class="mx-auto">
+          <img
+            class="border rounded-lg"
+            src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+            alt=""
+            width="436px"
+            height="323px"
+          />
+        </div>
+      </div>
+    </div>
+    <div class="bg-[#1D267D] p-4 h-fit w-[75%] mx-auto">
+      <h1 class="mb-10 text-center text-[#FFFFFF] font-bold text-2xl">
+        Featured eBooks
+      </h1>
+      <div class="mx-auto flex item-center justify-center ">
+        <div class="border rounded-lg p-4 shadow-sm  ">
+          <div class="w-72" >
+            <img
+              class="mx-auto"
+              src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+              alt=""
+              width="330px"
+            />
+            <h2 class=" text-[#FFFFFF]">
+                Lorem ipsum dolor sit amet consectetur
+            </h2>
+            <p class=" text-[#FFFFFF]">
+              Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+              maxime!
+            </p>
+            <p style="color: yellow" class="">
+              <i class="fa-solid fa-star mr-1"></i
+              ><i class="fa-solid fa-star mr-1"></i
+              ><i class="fa-solid fa-star mr-1"></i
+              ><i class="fa-solid fa-star mr-1"></i
+              ><i class="fa-solid fa-star mr-1"></i>
+            </p>
+            <div class="flex justify-between items-center">
+              <p class="text-[#FFFFFF]">$99</p>
+              <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+            </div>
+          </div>
+        </div>
+        <div class="border rounded-lg p-4 shadow-sm ">
+            <div class="w-72" >
+              <img
+                class="mx-auto"
+                src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                alt=""
+                width="330px"
+              />
+              <h2 class=" text-[#FFFFFF]">
+                  Lorem ipsum dolor sit amet consectetur
+              </h2>
+              <p class=" text-[#FFFFFF]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                maxime!
+              </p>
+              <p style="color: yellow" class="">
+                <i class="fa-solid fa-star mr-1"></i
+                ><i class="fa-solid fa-star mr-1"></i
+                ><i class="fa-solid fa-star mr-1"></i
+                ><i class="fa-solid fa-star mr-1"></i
+                ><i class="fa-solid fa-star mr-1"></i>
+              </p>
+              <div class="flex justify-between items-center">
+                <p class="text-[#FFFFFF]">$99</p>
+                <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+          <div class="border rounded-lg p-4 shadow-sm">
+            <div class="w-72" >
+              <img
+                class="mx-auto"
+                src="./assets/front-view-stacked-books-ladders-education-day.jpg"
+                alt=""
+                width="330px"
+              />
+              <h2 class=" text-[#FFFFFF]">
+                  Lorem ipsum dolor sit amet consectetur
+              </h2>
+              <p class=" text-[#FFFFFF]">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nemo,
+                maxime!
+              </p>
+              <p style="color: yellow" class="">
+                <i class="fa-solid fa-star mr-1"></i
+                ><i class="fa-solid fa-star mr-1"></i
+                ><i class="fa-solid fa-star mr-1"></i
+                ><i class="fa-solid fa-star mr-1"></i
+                ><i class="fa-solid fa-star mr-1"></i>
+              </p>
+              <div class="flex justify-between items-center">
+                <p class="text-[#FFFFFF]">$99</p>
+                <button class="px-3 py-1 text-[#FFFFFF] bg-[#2F58CD] rounded-lg">Add to Cart</button>
+              </div>
+            </div>
+          </div>
+      </div>
+    </div>
+    <div class="bg-[#1D267D] p-4 h-fit w-[75%] mx-auto ">
+        <h1 class="text-center text-[#FFFFFF] font-bold text-2xl mt-10 mb-10">Apa Kata Customer kami</h1>
+        <div class="mx-auto flex items-center justify-center ">
+            <div class="border rounded-lg shadow-md h-[200px] flex items-center mr-5">
+                <div class="w-96 text-[#FFFFFF] ">
+                    <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <div class="flex flex-row justify-center mt-10 ">
+                        <img class="w-14 border rounded-full mr-2" src="assets/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded.jpg" alt="">
+                        <div class="">
+                            <p>Lorem</p>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border rounded-lg shadow-md h-[200px] flex items-center">
+                <div class="w-96 text-[#FFFFFF] ">
+                    <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <div class="flex flex-row justify-center mt-10 ">
+                        <img class="w-14 border rounded-full mr-2" src="assets/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded.jpg" alt="">
+                        <div class="">
+                            <p>Lorem</p>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+        <div class="mx-auto flex items-center justify-center">
+            <div class="border rounded-lg shadow-md h-[200px] flex items-center mr-5 mt-5  ">
+                <div class="w-96 text-[#FFFFFF] ">
+                    <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <div class="flex flex-row justify-center mt-10 ">
+                        <img class="w-14 border rounded-full mr-2" src="assets/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded.jpg" alt="">
+                        <div class="">
+                            <p>Lorem 3</p>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="border rounded-lg shadow-md h-[200px] flex items-center mt-5">
+                <div class="w-96 text-[#FFFFFF] ">
+                    <h2 class="text-center">Lorem ipsum dolor sit amet.</h2>
+                    <p class="text-center">Lorem ipsum dolor sit amet consectetur, adipisicing elit.</p>
+                    <div class="flex flex-row justify-center mt-10 ">
+                        <img class="w-14 border rounded-full mr-2" src="assets/portrait-successful-man-having-stubble-posing-with-broad-smile-keeping-arms-folded.jpg" alt="">
+                        <div class="">
+                            <p>Lorem</p>
+                            <p>Lorem, ipsum dolor.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="bg-[#1D267D] p-4 h-fit w-[75%] mx-auto">
+        <h1 class="text-[#FFFFFF] font-bold text-2xl text-center">FAQ ?</h1> <hr style="width: 10%; margin: 0 auto;">
+        <div class="mx-auto mt-5">
+            <div class="text-center text-[#FFFFFF] border py-2">
+              <ul>
+                <li class="py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. <button><i class="fa-solid fa-chevron-down ml-10"></i></button></li> <hr style="width: 50%; margin: 0 auto;">
+                <li class="py-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.<button><i class="fa-solid fa-chevron-down ml-10"></i></button></li> <hr style="width: 50%; margin: 0 auto;">
+                <li class="py-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.<button><i class="fa-solid fa-chevron-down ml-10"></i></button></li> <hr style="width: 50%; margin: 0 auto;">
+                <li class="py-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit.<button><i class="fa-solid fa-chevron-down ml-10"></i></button></li> <hr style="width: 50%; margin: 0 auto;">
+                <li class="py-2">Lorem ipsum dolor sit, amet consectetur adipisicing elit.<button><i class="fa-solid fa-chevron-down ml-10"></i></button></li> <hr style="width: 50%; margin: 0 auto;">
+              </ul>
+            </div>
+        </div>
+    </div>
+    <footer>
+      <div class="bg-[#1D267D] p-4 h-fit w-[75%] mx-auto justify-between flex">
+        <div class="flex justify-between items-center">
+            <h1 class="text-[#FFFFFF] font-thin text-sm">&copy; 2023 Cek Toko Sebelah. All Right Reserved</h1>
+        </div>
+        <div class="py-2 px-2">
+            <a href="#"><i class="fa-brands fa-instagram text-[#FFFFFF] mr-5"></i></a>
+            <a href="#"><i class="fa-brands fa-twitter text-[#FFFFFF] mr-5"></i></a>
+            <a href="#"><i class="fa-brands fa-github text-[#FFFFFF]"></i></a>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>
